@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/weather_data_row_style"
+    android:paddingVertical="@dimen/_16sdp"
+    android:layout_marginVertical="@dimen/_4sdp"
+    android:paddingHorizontal="@dimen/_10sdp">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/weatherDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/thursday"
+        android:fontFamily="@font/inter_semibold"
+        android:textColor="@color/textColor"
+        app:layout_constraintBottom_toBottomOf="@id/weatherIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/weatherIcon" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/weatherValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 °"
+        android:fontFamily="@font/inter_bold"
+        android:textColor="@color/textColor"
+        android:layout_marginEnd="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/weatherIcon"
+        app:layout_constraintEnd_toStartOf="@id/weatherIcon"
+        app:layout_constraintTop_toTopOf="@id/weatherIcon" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/weatherIcon"
+        android:layout_width="@dimen/_24sdp"
+        android:layout_height="@dimen/_24sdp"
+        android:src="@drawable/icon_weather_sun"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:contentDescription="@string/day_1_weather_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
